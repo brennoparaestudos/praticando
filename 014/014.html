@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apenas praticando 14.0</title>
+    <style>
+        div#container{
+            background-color: salmon;
+            display: flex;
+            height: 300px;
+            width: 300px;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#n1{
+            background-color: aqua;
+            flex-basis: 150px;
+            flex-shrink: 1;
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+        }
+
+        div#n2{
+            background-color: aqua;        
+            flex-basis: 150px;
+            flex-shrink: 0;
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+        }
+
+        div#n3{
+            background-color: aqua;
+            flex-basis: 150px;
+            flex-shrink: 1;
+            border: 1px solid black;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="n1">item 1</div>
+        <div id="n2">item 2</div>
+        <div id="n3">item 3</div>
+    </div>
+</body>
+</html>
