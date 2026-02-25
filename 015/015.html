@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            background-color: gray;
+        }
+
+
+        header.menu {
+            display: flex;
+            
+            justify-content: space-between;
+            
+            height: 70px;
+            background-color: lightgray;
+        }
+
+        nav.navegacao{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+           align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="menu">
+             <h1>LOGO</h1>
+                
+         <nav class="navegacao">
+                <a href="#" class="links">Menu</a>
+                <a href="#" class="links">Menu</a>
+                <a href="#" class="links">Menu</a>
+                <a href="#" class="links">Menu</a>  
+        </nav>
+    </header>
+   
+</body>
+</html>
