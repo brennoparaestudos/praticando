@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 2.6</title>
+    <style>
+        div#caixa{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa"></div>
+
+    <script>
+        var caixa_colorida = document.querySelector('#caixa')
+
+        caixa_colorida.addEventListener('mouseenter', coloriu)
+        caixa_colorida.addEventListener('mouseout', original)
+
+        function coloriu(){
+            caixa_colorida.style.background = 'yellow'
+        }
+
+        function original(){
+            caixa_colorida.style.background = 'blue'
+        }
+    </script>
+</body>
+</html>
