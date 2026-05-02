@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 3.1</title>
+</head>
+<body>
+    <p>
+        Digite sua idade:
+        <input type="number" name="idade" id="iidade">
+    </p>
+
+    <input type="button" value="Verificar" onclick="verificador()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificador(){
+            var idade = Number(document.querySelector('input#iidade').value === '')
+            var res = document.querySelector('div#res')
+
+            if(idade < 0){
+                alert('[ERRO] A idade tem que ser igual ou maior do que 0!!!')
+            } else if(idade < 18){
+                res.innerHTML = `Você tem ${idade} anos, ou seja, você é de menor!`
+            }else{
+                res.innerHTML = `Você tem ${idade} anos, ou seja, você é de maior!`
+            }
+        }
+    </script>
+</body>
+</html>
