@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 3.0</title>
+</head>
+<body>
+    <p>
+        Digite um número:
+        <input type="number" name="num" id="inum">
+    </p>
+    <input type="button" value="Verificar" onclick="verificador()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificador(){
+            var numero = document.getElementById("inum")
+            var resposta = document.getElementById('res')
+
+            if(numero.value % 2 == 0){
+            resposta.innerHTML = `O número ${numero.value} é par.`
+            } else{
+                resposta.innerHTML = `O número ${numero.value} é impar.`
+            }
+        }
+        
+    </script>
+</body>
+</html>
