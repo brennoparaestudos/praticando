@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 3.3</title>
+</head>
+<body>
+    <h1>Sistema de Notas</h1>
+
+    <p>
+        Digite a sua nota:
+        <input type="number" name="nota" id="inota">
+    </p>
+
+    <input type="button" value="Verificar" id="botao">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        var botao = document.querySelector('input#botao')
+
+        botao.addEventListener('click', verificador)
+
+        function verificador(){
+            var inputNota = document.getElementById('inota')
+            var res = document.querySelector('div#res')
+            var nota = Number(inputNota.value)
+
+            if(nota < 0 || nota > 10){
+                res.innerHTML = 'O valor digitado não pode ser usado como nota, escreva um valor entre <strong>0 e 10!</strong>'
+                
+            } else if(nota == 10){
+                res.innerHTML = `<p>A nota digitada foi ${nota}, então, a letra de acordo com a nota é <strong>A</strong></p>`
+            } else if(nota >= 8 && nota < 10){
+                res.innerHTML = `<p>A nota digitada foi ${nota}, então, a letra de acordo com a nota é <strong>B</strong></p>`
+            } else if(nota >= 6 && nota < 8){
+                res.innerHTML = `<p>A nota digitada foi ${nota}, então, a letra de acordo com a nota é <strong>C</strong></p>`
+            } else{
+                res.innerHTML = `<p>A nota digitada foi ${nota}, então, você foi <strong>REPROVADO (a)</strong></p>`
+            }
+
+        }
+
+    </script>
+</body>
+</html>
