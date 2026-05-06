@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 4.2</title>
+</head>
+<body>
+    <h1>Calculando Intervalos</h1>
+
+    <p>
+        Digite um número inicio: <input type="number" name="numInicio" id="inumInicio">
+    </p>
+
+    <p>
+        Digite um número fim: <input type="number" name="numFim" id="inumFim">
+    </p>
+
+    <input type="button" value="Calcular Intervalo" onclick="intervalo()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function intervalo(){
+            var nInicio = document.getElementById('inumInicio')
+            var nFim = document.getElementById('inumFim')
+            var soma = 0
+            var res = document.getElementById('res')
+
+            if(nInicio.value.length == 0 || nFim.value.length == 0){
+               
+                alert('[ERRO] digite algum número nos dois campos')
+
+            } else{
+
+                let nI = Number(nInicio.value)
+                let nF = Number(nFim.value)
+
+                for(let c = nI; c <= nF; c++){
+                    
+                    soma += c
+
+                }
+
+                res.innerHTML = `A soma do intervalo de ${nI} a ${nF} é: ${soma}`
+
+            }
+        }
+    </script>
+</body>
+</html>
