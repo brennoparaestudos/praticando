@@ -2,7 +2,7 @@ let compras = []
 
 compras.push('arroz', 'feijão', 'carne', 'frango', 'bisteca')
 
- compras.sort()
+compras.sort()
 
 console.log(`Essa é a quantidade de itens que tem na lista ${compras.length}`)
 
