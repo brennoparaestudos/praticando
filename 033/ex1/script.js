@@ -13,6 +13,8 @@ let btnRmv = document.getElementById("btn-rmv")
 
 
   btnRmv.addEventListener("click", function(){
-    
+    if(ul.childNodes.length > 0){
+      ul.removeChild(ul.lastChild)
+    }
   })
   
