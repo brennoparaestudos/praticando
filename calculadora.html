@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+</head>
+<style>
+    body { 
+        font-family: Arial; 
+        text-align: center;
+        background: #0f172a; 
+        color: white; 
+        padding: 40px; 
+    }
+  h1 { 
+        font-size: 3rem; 
+        color: #f7df1e; 
+    }
+
+  input { padding: 10px; 
+        font-size: 1.2rem;
+        border-radius: 8px; 
+        border: 2px solid #38bdf8; 
+        margin: 5px;
+    }
+  button { padding: 10px 30px; 
+        background: #38bdf8;
+        color: white; 
+        border: none;
+        border-radius: 8px; 
+        font-size: 1rem;
+        cursor: pointer; 
+        margin: 10px;
+    }
+    .resposta{
+        font-size: 3rem;
+        background-color: #cb3553; 
+        color: #d3d3c8;
+        border: #f7df1e solid;  
+        border-radius: 6px;
+        width: 460px;
+        height: 100px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .comparacao {
+        font-size: 1.8rem;
+        background-color: #1e293b;
+        color: #38bdf8;
+        border: #38bdf8 solid 2px;
+        border-radius: 6px;
+        width: 350px;
+        height: 60px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .extra {
+        font-size: 1.8rem;
+        background-color: #1e293b;
+        color: #f7df1e;
+        border: #f7df1e solid 2px;
+        border-radius: 6px;
+        width: 350px;
+        height: 60px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <h1> Todas operações Básicas </h1>
+  <input id="valor1" placeholder="Digite o valor 1">
+  <input id="valor2" placeholder="Digite o valor 2">
+   
+  <button id="btn">Calcular</button>
+
+  <p id="soma" class="resposta"></p>
+  <p id="subtracao" class="resposta"></p>
+  <p id="multiplicacao" class="resposta"></p>
+  <p id="divisao" class="resposta"></p>
+  <p id="potencia" class="resposta"></p>
+
+  <p id="comparacao" class="comparacao"></p>
+
+  <p id="parImpar" class="extra"></p>
+
+  <script>
+    // Item 4: função que pega e valida os números dos inputs
+    function pegarNumeros() {
+      const v1 = Number(document.getElementById("valor1").value);
+      const v2 = Number(document.getElementById("valor2").value);
+      return { v1, v2 };
+    }
+
+    document.getElementById("btn").addEventListener("click", function() {
+      const { v1, v2 } = pegarNumeros();
+
+      // Item 2: validação de números inválidos
+      if (isNaN(v1) || isNaN(v2)) {
+        alert("⚠️ Digite apenas números!");
+        return;
+      }
+
+      // Item 3: verificação de divisão por zero
+      if (v2 === 0) {
+        document.getElementById("divisao").innerHTML = "⚠️ Não é possível dividir por zero!";
+      } else {
+        document.getElementById("divisao").innerHTML = "Divisão: " + (v1 / v2);
+      }
+
+      document.getElementById("soma").innerHTML          = "Soma: "           + (v1 + v2);
+      document.getElementById("subtracao").innerHTML     = "Subtração: "      + (v1 - v2);
+      document.getElementById("multiplicacao").innerHTML = "Multiplicação: "  + (v1 * v2);
+      document.getElementById("potencia").innerHTML      = "Potência: "       + (v1 ** v2);
+
+      // Item 5: comparação entre v1 e v2
+      let resultadoComparacao;
+      if (v1 > v2) {
+        resultadoComparacao = "v1 é maior que v2";
+      } else if (v1 < v2) {
+        resultadoComparacao = "v1 é menor que v2";
+      } else {
+        resultadoComparacao = "v1 é igual a v2";
+      }
+      document.getElementById("comparacao").innerHTML = resultadoComparacao;
+
+      // Extra: ternário para Par ou Ímpar de v1
+      document.getElementById("parImpar").innerHTML =
+        "v1 é " + (v1 % 2 === 0 ? "Par" : "Ímpar");
+    });
+  </script>
+</body>
+</html>
