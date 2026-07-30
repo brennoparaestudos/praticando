@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 2.6</title>
+</head>
+<body>
+    <h1 id="titulo">Treinando DOM</h1>
+    <button class="b1">Clique aqui para ligar</button>
+    <button class="b2">Clique aqui para desligar</button>
+    <script>
+        var titu = document.getElementById('titulo')
+        var clique1 = document.querySelector('button.b1')
+        var clique2 = document.querySelector('button.b2')
+
+        clique1.addEventListener('click', ligado)
+        clique2.addEventListener('click', desligado)
+
+        function ligado(){
+            titu.innerText = 'Ligado'
+        }
+
+        function desligado(){
+            titu.innerText = 'Desligado'
+        }
+
+    </script>
+</body>
+</html>

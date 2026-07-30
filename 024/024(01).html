@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 4.1</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+
+    <p>
+        Digite um número: <input type="number" name="num" id="inum">
+    </p>
+
+    <input type="button" value="Mostrar Tabuada" id="botao">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        var botao = document.getElementById('botao')
+        botao.addEventListener('click', tabuada)
+
+        function tabuada(){
+            let numero = document.getElementById('inum')
+            let res = document.getElementById('res')
+
+            res.innerHTML = ''
+
+            if(numero.value.length == 0){
+                alert('[ERRO] Digite um valor!')
+            } else{
+                let num = Number(numero.value)
+
+                for(let c = 1; c <= 10; c++){
+                    res.innerHTML += `${num} x ${c} = ${num * c}<br>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

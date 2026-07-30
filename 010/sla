@@ -1,0 +1,62 @@
+        <fieldset>
+            <legend>Cadastro simples</legend>
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="Nome" id="inome" required placeholder="Nome Completo">
+            </p>
+
+            <p>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+
+            <p>
+                <label for="isenha">Senha</label>
+                <input type="password" name="Senha" id="isenha" required>
+            </p>
+
+            <p>
+                <label for="iidade">Idade</label>
+                <input type="number" name="idade" id="iidade" min="0" max="120" required>
+            </p>
+        </fieldset>
+
+          <fieldset>
+            <legend>Agendamento de Consulta</legend>
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome " id="inome" required placeholder="Nome Completo">
+            </p>
+
+            <p>
+                <label for="idata">Data</label>
+                <input type="date" name="data " id="idata" required>
+            </p>
+
+            <p>
+                <label for="ihora">Hora</label>
+                <input type="time" name="hora " id="ihora" required min="08:00" max="18:00">
+            </p>
+        </fieldset>
+
+        <fieldset>
+           <legend>Tipo de Consulta</legend> 
+           
+           <label for="igeral">Clínica Geral</label>
+           <input type="radio" name="consulta" id="igeral" required><br>
+
+           <label for="iodonto">Odontologia</label>
+           <input type="radio" name="consulta" id="iodonto" required><br>
+
+            <label for="iofta">Oftamologia</label>
+            <input type="radio" name="consulta" id="iofta" required>
+        </fieldset>
+
+        
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>

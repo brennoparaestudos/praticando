@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando JS 3.2</title>
+</head>
+<body>
+    <p>
+        Digite um número:
+        <input type="number" name="numero" id="inumero">
+    </p>
+
+    <input type="button" value="Verificar" id="botao">    
+
+    <div id="res">
+
+    </div>
+
+    <script>
+            var inputNumero = document.querySelector('input#inumero')
+            var res = document.getElementById('res')
+            var botao = document.getElementById("botao")
+
+            botao.addEventListener('click', verificador)
+
+            function verificador(){
+                var numero = Number(inputNumero.value)
+
+                if (inputNumero.value === '') {
+                    res.innerHTML = 'Digite um número!'
+                    return
+                }
+                
+                if(numero < 0){
+                res.innerHTML = `O numero digitado foi ${numero}, ou seja, ele é um número negativo!`
+                } else if(numero == 0){
+                res.innerHTML = `O numero digitado foi ${numero}, ou seja, ele é ZERO`
+                } else if (numero >= 1){
+                res.innerHTML = `O numero digitado foi ${numero}, ou seja, ele é um número positivo`
+                }
+            }
+    </script>
+</body>
+</html>

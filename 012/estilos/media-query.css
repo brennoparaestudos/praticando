@@ -1,0 +1,8 @@
+@charset "UTF-8";  
+
+@media screen and (max-width: 600px) {
+    div.box{
+        display: block;
+        width: 100%;
+    }
+}

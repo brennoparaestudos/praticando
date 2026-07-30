@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apenas praticando 11.0</title>
+</head>
+<body>
+    <h1>Exercicio 1</h1>
+
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required>
+            </p>
+
+            <p>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+
+            <p>
+                <label for="isenha">Senha</label>
+                <input type="password" name="senha" id="isenha" required>
+            </p>
+
+            <p>
+                <label for="iidade">Idade</label>
+                <input type="number" name="idade" id="iidade" min="0" max="120" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferências</legend>
+
+            <label for="icid">Cidade</label>
+            <input type="text" name="cidade" id="icid" list="icidade" required>
+
+            <datalist id="icidade">
+
+                <option>São Paulo</option>
+                <option>Rio de Janeiro</option>
+                <option>Salvador</option>
+                <option>Belo Horizonte</option>
+                <option>Recife</option>
+
+            </datalist>
+
+            <p>
+                <label for="icom">Comentários adicionais</label>
+                <textarea name="com" id="icom" required></textarea>
+            </p>
+        </fieldset>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
