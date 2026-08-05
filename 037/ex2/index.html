@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+</head>
+<body>
+    <script>
+       let APIrecebida = '{"nome":"Brenno","idade":18,"curso":"ADS"}'
+
+       let APIrecebida_OBJ = JSON.parse(APIrecebida)
+       APIrecebida_OBJ.cidade = 'salvador'
+
+       console.log(APIrecebida_OBJ.nome)
+       console.log(APIrecebida_OBJ.idade)
+       console.log(APIrecebida_OBJ.curso)
+       console.log(APIrecebida_OBJ)
+    </script>
+</body>
+</html>
