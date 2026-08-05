@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+</head>
+<body>
+    <script>
+      let times_de_futebol = [{
+        nome: 'Barcelona',
+        titulos: 15,
+      },
+
+      {
+        nome: 'Real Madrid',
+        titulos: 16,
+      },
+
+      {
+        nome: 'Liverpool',
+        titulos: 14
+      }
+    ]
+
+    let times_de_futebol_json = JSON.stringify(times_de_futebol, null, 2)
+
+    times_de_futebol = JSON.parse(times_de_futebol_json)
+
+    let maisTitulos = times_de_futebol[0]
+    for(let i = 0; i < times_de_futebol.length; i++){
+       
+
+        if(times_de_futebol[i].titulos > maisTitulos.titulos){
+            maisTitulos = times_de_futebol[i]
+        }
+       
+    }
+
+     console.log(maisTitulos.nome)
+    </script>
+</body>
+</html>
