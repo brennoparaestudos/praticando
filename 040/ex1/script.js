@@ -1,6 +1,6 @@
 const texto1 = 'ola'
 const texto2 = 'ola123'
-const regex = /[a-z]/gi
+const regex = /^[a-z]+$/i
 
-regex.test(texto1)
-regex.test(texto2)
+console.log(regex.test(texto1))
+console.log(regex.test(texto2))
